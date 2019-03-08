@@ -6,7 +6,7 @@ public class Movimento_acelerometro : MonoBehaviour
 {
 
     [SerializeField]
-    private float FuerzaLateral=1;
+    private float FuerzaLateral = 1;
 
     private Rigidbody2D rb;
 
@@ -20,12 +20,18 @@ public class Movimento_acelerometro : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        rb.velocity = new Vector2(FuerzaLateral * Input.acceleration.x, rb.velocity.y);
-
-
-        Debug.Log(Input.acceleration.x.ToString());
+        move();
 
         
+    }
+
+
+    // Funcion para el movimiento del personaje
+    private void move()
+    {
+        float move = Input.GetAxisRaw("Horizontal");
+
+
+        rb.velocity = new Vector2(FuerzaLateral * move, rb.velocity.y);
     }
 }
