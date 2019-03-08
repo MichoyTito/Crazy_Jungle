@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class Movimento_acelerometro : MonoBehaviour
 {
-
+    [Header("Floats")]
     [SerializeField]
     private float FuerzaLateral = 1;
+
+
 
     private Rigidbody2D rb;
 
 
-
+    // Start is called before the first frame update
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
