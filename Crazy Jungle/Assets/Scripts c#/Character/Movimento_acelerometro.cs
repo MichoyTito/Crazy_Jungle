@@ -16,7 +16,7 @@ public class Movimento_acelerometro : MonoBehaviour
     //Bool que indica si se va a usar el teclado o Unity Remote
     [Header("Input: ")]
     [SerializeField]
-    private bool UnityRemote_Conectado=false;
+    private bool UnityRemote_Conectado=true;
 
 
     //Pedidos en Start()
