@@ -54,6 +54,7 @@ public class canvasMain : MonoBehaviour
     public void onClickSurvival()
     {
         FindObjectOfType<audioManager>().Play("Click");
+        //SceneManager.LoadScene("Survival");
     }
     public void onClickQuit()
     {
@@ -62,6 +63,7 @@ public class canvasMain : MonoBehaviour
     public void onClickShop()
     {
         FindObjectOfType<audioManager>().Play("Click");
+        SceneManager.LoadScene("Shop");
     }
     public void onClickSettings()
     {
