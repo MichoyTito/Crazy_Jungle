@@ -4,21 +4,24 @@ using UnityEngine;
 
 public class ColisionesObstaculos : MonoBehaviour
 {
+    
     [SerializeField]
-    private float DelayReseteo = 1f;
+    private float DelayChoque = 1f;
+  
 
 
 
 
     private void OnTriggerEnter2D(Collider2D Other)
     {
+        //Obstaculos
         if (Other.tag == "Obstaculo")
         {
             
-            Invoke("Reset", DelayReseteo);
+            Invoke("Reset", DelayChoque);
         }
-   
-}
+
+    }
 
 
     private void Reset()
@@ -26,5 +29,6 @@ public class ColisionesObstaculos : MonoBehaviour
         FindObjectOfType<GameManager>().ResetLevel();
     }
 
+   
 
 }

@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Obstaculo
+  - Agua
+  - Trigger Gravity
+  - Trigger StopWater
   layers:
   - Default
   - TransparentFX
