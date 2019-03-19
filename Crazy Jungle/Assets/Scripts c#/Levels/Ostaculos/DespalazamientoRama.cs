@@ -22,7 +22,7 @@ public class DespalazamientoRama : MonoBehaviour
     private void Start()
     {
         rama = GetComponent<Transform>();
-
+        
     }
 
 

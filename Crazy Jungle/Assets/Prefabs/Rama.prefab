@@ -141,6 +141,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aafa0567d693074b9108eb0921656d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Velocidad: 0.5
-  aceleracion: 0.85
+  Velocidad: 5
+  aceleracion: 0.3
   AlturaMaxima: 8.05
