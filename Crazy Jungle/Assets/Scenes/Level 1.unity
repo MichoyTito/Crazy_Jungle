@@ -1555,8 +1555,13 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 1993896c16d3eff4f94ee9dc28cf6f54,
+      objectReference: {fileID: 21300000, guid: def4844e1137f5d4ead0a05f0ec412c3,
         type: 3}
+    - target: {fileID: 5681786493778206048, guid: bea9897da4da7084c8447dbcaefe9264,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5681786493778206050, guid: bea9897da4da7084c8447dbcaefe9264,
         type: 3}
       propertyPath: m_Offset.y
