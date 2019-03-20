@@ -6,22 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class canvasMain : MonoBehaviour
 {
-    //[Header("Canvas Items")]
-    //[SerializeField]
-    //private GameObject Levels;
-    // [SerializeField]
-    //private GameObject Survival;
-    //[SerializeField]
-    // private GameObject Quit;
-    // [SerializeField]
-    // private GameObject Settings;
-    //[SerializeField]
-    // private GameObject Shop;
-    // [SerializeField]
-    //private GameObject NoAds;
 
     [SerializeField]
     private GameObject camera;
+    [SerializeField]
+    private GameObject loadScreen;
 
     // Start is called before the first frame update
     void Start()
@@ -47,8 +36,11 @@ public class canvasMain : MonoBehaviour
     }
     public void onClickLevelOne()
     {
+        camera.GetComponent<Animator>().SetBool("loadScreen", true);
+        loadScreen.SetActive(true);
+        GameObject.Find("Background").GetComponent<AudioSource>().Stop();
         FindObjectOfType<audioManager>().Play("Click");
-        SceneManager.LoadScene("Level 1");
+        Invoke("onLoadLevelOne", 3);
     }
 
     public void onClickSurvival()
@@ -62,11 +54,25 @@ public class canvasMain : MonoBehaviour
     }
     public void onClickShop()
     {
+        camera.GetComponent<Animator>().SetBool("loadScreen", true);
+        loadScreen.SetActive(true);
+        GameObject.Find("Background").GetComponent<AudioSource>().Stop();
         FindObjectOfType<audioManager>().Play("Click");
-        SceneManager.LoadScene("Shop");
+        Invoke("onLoadShop", 3);
     }
     public void onClickSettings()
     {
         FindObjectOfType<audioManager>().Play("Click");
+    }
+
+
+
+    private void onLoadLevelOne()
+    {
+        SceneManager.LoadScene("Level 1");
+    }
+    private void onLoadShop()
+    {
+        SceneManager.LoadScene("Shop");
     }
 }
