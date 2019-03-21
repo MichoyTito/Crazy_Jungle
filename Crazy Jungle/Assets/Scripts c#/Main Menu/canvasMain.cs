@@ -11,6 +11,8 @@ public class canvasMain : MonoBehaviour
     private GameObject camera;
     [SerializeField]
     private GameObject loadScreen;
+    [SerializeField]
+    private GameObject areYouSure;
 
     // Start is called before the first frame update
     void Start()
@@ -51,7 +53,17 @@ public class canvasMain : MonoBehaviour
     public void onClickQuit()
     {
         FindObjectOfType<audioManager>().Play("Click");
+        areYouSure.SetActive(true);
     }
+    public void onClickYes()
+    {
+        Application.Quit();
+    }
+    public void onClickNo()
+    {
+        areYouSure.SetActive(false);
+    }
+
     public void onClickShop()
     {
         camera.GetComponent<Animator>().SetBool("loadScreen", true);
