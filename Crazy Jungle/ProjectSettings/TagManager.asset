@@ -8,6 +8,7 @@ TagManager:
   - Agua
   - Trigger Gravity
   - Trigger StopWater
+  - Banana
   layers:
   - Default
   - TransparentFX

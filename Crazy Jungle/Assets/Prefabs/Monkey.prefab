@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5681786493778206051}
   - component: {fileID: 6744868312229536256}
   - component: {fileID: 7464634219858435754}
+  - component: {fileID: 800007109}
   m_Layer: 0
   m_Name: Monkey
   m_TagString: Player
@@ -31,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 5681786493778206076}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 3.298, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -72,8 +73,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 558b011e5e660594aa3f00902801d497, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: def4844e1137f5d4ead0a05f0ec412c3, type: 3}
   m_Color: {r: 0.6603774, g: 0.42506236, b: 0.27100393, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -118,18 +119,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.008156031, y: 0.005434245}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.4, y: 0.4}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.32033396, y: 0.41308492}
   m_EdgeRadius: 0
 --- !u!114 &5681786493778206051
 MonoBehaviour:
@@ -172,3 +173,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DelayWin: 3
+--- !u!114 &800007109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5681786493778206076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f93c8222ba2eecf4eb5c1538de48eda0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DelayDisparos: 0.2
+  CantidadBananas: 0
+  PrefabProyectil: {fileID: 6324898838812056076, guid: 793a4292b4bdec04799d364e1d7ce324,
+    type: 3}

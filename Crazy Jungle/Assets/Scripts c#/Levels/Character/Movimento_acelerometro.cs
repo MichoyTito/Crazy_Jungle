@@ -16,7 +16,8 @@ public class Movimento_acelerometro : MonoBehaviour
     //Bool que indica si se va a usar el teclado o Unity Remote
     [Header("Input: ")]
     [SerializeField]
-    private bool UnityRemote_Conectado=true;
+    private bool UnityRemote_Conectado=true;//Este ahora se modifica en Start(), si eesta en un celular se activa
+
 
 
     //Pedidos en Start()
@@ -32,6 +33,11 @@ public class Movimento_acelerometro : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         InclinacionInicial = Input.acceleration;
+
+        if (SystemInfo.supportsAccelerometer)
+        {
+            UnityRemote_Conectado = true;
+        }
 
     }
 

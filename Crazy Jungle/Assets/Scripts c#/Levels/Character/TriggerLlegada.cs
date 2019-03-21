@@ -49,7 +49,8 @@ public class TriggerLlegada : MonoBehaviour
     {
         GameObject Splash = Other.transform.Find("Water Splash").gameObject;
 
-        Splash.GetComponent<Transform>().position = gameObject.GetComponent<Transform>().position;
+        Splash.GetComponent<Transform>().position = gameObject.GetComponent<Transform>().position + new Vector3(0, -1, 0);
+
 
         Splash.SetActive(true);       
     }
