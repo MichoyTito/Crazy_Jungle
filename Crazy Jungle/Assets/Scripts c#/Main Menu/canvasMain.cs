@@ -58,6 +58,7 @@ public class canvasMain : MonoBehaviour
     public void onClickYes()
     {
         Application.Quit();
+        Application.Quit();
     }
     public void onClickNo()
     {
