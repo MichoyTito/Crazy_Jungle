@@ -101,7 +101,7 @@ Rigidbody2D:
   m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 9dcf4d91651d88e4a9eec0045c673078, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FuerzaLateral_PC: 5.05
-  FuerzaLateral_Celular: 5.05
+  FuerzaLateral_Celular: 10
   UnityRemote_Conectado: 0
 --- !u!114 &6744868312229536256
 MonoBehaviour:

@@ -13,7 +13,7 @@ public class ActivarAlerta : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
      GameObject [] Lista = GameObject.FindObjectsOfType<GameObject>();
         for(int i = 0; i < Lista.Length; i++)

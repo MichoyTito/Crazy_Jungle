@@ -7,7 +7,27 @@ public class TriggerLlegada : MonoBehaviour
     [SerializeField]
     private float DelayWin = 3f;
 
-    
+    private GameObject arboles;
+
+
+    //Consegir los arboles
+    private void Awake()
+    {
+        GameObject[] Lista = FindObjectsOfType<GameObject>();
+        for(int i = 0; i < Lista.Length; i++)
+        {
+            if (Lista[i].name == "Background")
+            {
+                arboles = Lista[i].transform.Find("Arboles").gameObject;
+                Debug.Log("Arboles encontrados");
+            }
+        }
+
+
+
+    }
+
+
 
     private void OnTriggerEnter2D(Collider2D Other)
     {
@@ -31,10 +51,12 @@ public class TriggerLlegada : MonoBehaviour
 
     }
 
-    //El mono emieza a caer enla pantalla
+    //El mono emieza a caer enla pantalla y los arboles dejan de subir
     private void EnableGravity()
     {
         GetComponent<Rigidbody2D>().gravityScale = 1f;
+
+        arboles.GetComponent<desplazamientoSinDestruir>().enabled = false;
     }
 
 
