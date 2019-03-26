@@ -1232,11 +1232,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3086190742940644393, guid: 9b5c323e15efffb4d81f47e977ac1ea5,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3086190742876481746, guid: 9b5c323e15efffb4d81f47e977ac1ea5,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -1252,23 +1247,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tronco Der Collider
       objectReference: {fileID: 0}
+    - target: {fileID: 3086190742876481745, guid: 9b5c323e15efffb4d81f47e977ac1ea5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tree
+      objectReference: {fileID: 0}
     - target: {fileID: 3086190743187074026, guid: 9b5c323e15efffb4d81f47e977ac1ea5,
         type: 3}
       propertyPath: m_Name
       value: Tronco Izq Collider
       objectReference: {fileID: 0}
-    - target: {fileID: 3086190742876481756, guid: 9b5c323e15efffb4d81f47e977ac1ea5,
+    - target: {fileID: 3086190743187074026, guid: 9b5c323e15efffb4d81f47e977ac1ea5,
         type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3086190743187074036, guid: 9b5c323e15efffb4d81f47e977ac1ea5,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
+      propertyPath: m_TagString
+      value: Tree
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 3086190742876481756, guid: 9b5c323e15efffb4d81f47e977ac1ea5, type: 3}
     - {fileID: 3086190743187074036, guid: 9b5c323e15efffb4d81f47e977ac1ea5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9b5c323e15efffb4d81f47e977ac1ea5, type: 3}
 --- !u!4 &1580657243989686727 stripped

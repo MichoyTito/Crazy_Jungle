@@ -19,7 +19,7 @@ public class TriggerLlegada : MonoBehaviour
             if (Lista[i].name == "Background")
             {
                 arboles = Lista[i].transform.Find("Arboles").gameObject;
-                Debug.Log("Arboles encontrados");
+            
             }
         }
 

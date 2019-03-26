@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6744868312229536256}
   - component: {fileID: 7464634219858435754}
   - component: {fileID: 800007109}
+  - component: {fileID: 62710908}
   m_Layer: 0
   m_Name: Monkey
   m_TagString: Player
@@ -105,7 +106,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &5681786493778206050
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -146,7 +147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FuerzaLateral_PC: 5.05
   FuerzaLateral_Celular: 10
-  UnityRemote_Conectado: 0
+  UnityRemote_Conectado: 1
 --- !u!114 &6744868312229536256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,3 +190,18 @@ MonoBehaviour:
   CantidadBananas: 0
   PrefabProyectil: {fileID: 6324898838812056076, guid: 793a4292b4bdec04799d364e1d7ce324,
     type: 3}
+--- !u!114 &62710908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5681786493778206076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 723cc3a52d307b34a872a7043ba65b58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DistanciaSwipeMinima: 25
+  FuerzaImpulso: 1600
+  TiempoImpulso: 0.2

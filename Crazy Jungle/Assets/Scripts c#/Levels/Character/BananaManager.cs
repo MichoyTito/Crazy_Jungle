@@ -31,19 +31,23 @@ public class BananaManager : MonoBehaviour
     {
         //Dispara Bananas
 
-        if (CantidadBananas > 0)//Si tiene Bananas
+        if (GetComponent<SaltoLateral>().GetDisparar() || Input.GetKeyDown(KeyCode.Space))//Desliza el dedo o apreta space
         {
-            if (UltimoDisparo + DelayDisparos < Time.time)//Si paso suficiente tiempo desde el ultimo disparo
-            {
-                if (Input.touchCount > 0 || Input.GetKeyDown(KeyCode.Space))//si toca la pantalla o Space
-                {
-                    Instantiate(PrefabProyectil, this.transform.position, Quaternion.identity);
+            
+                    if (UltimoDisparo + DelayDisparos < Time.time)//Si paso suficiente tiempo desde el ultimo disparo
+                    {
+                        if (CantidadBananas > 0)//si tiene bananas
+                        {
+                            Instantiate(PrefabProyectil, this.transform.position, Quaternion.identity);
 
-                    UltimoDisparo = Time.time;
+                            UltimoDisparo = Time.time;
 
-                    CantidadBananas--;
-                }
-            }
+                            CantidadBananas--;
+
+                   
+                        }
+                    }
+            GetComponent<SaltoLateral>().SetDispararFalse();
         }
     }
 

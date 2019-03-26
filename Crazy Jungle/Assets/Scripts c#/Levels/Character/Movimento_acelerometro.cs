@@ -22,7 +22,7 @@ public class Movimento_acelerometro : MonoBehaviour
 
     //Pedidos en Start()
     private Rigidbody2D rb;
-    private Vector3 InclinacionInicial;
+    private float InclinacionInicial;
 
 
   
@@ -32,7 +32,7 @@ public class Movimento_acelerometro : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        InclinacionInicial = Input.acceleration;
+        InclinacionInicial = (Input.acceleration.x);
 
         if (SystemInfo.supportsAccelerometer)
         {
@@ -59,24 +59,28 @@ public class Movimento_acelerometro : MonoBehaviour
     }
 
 
-
-
-    //Funcion para mover el personaje inclinando el celular
-    private void moveCelular()
-    {
-        float Despalazamiento_X = (FuerzaLateral_Celular * Input.acceleration.x) - InclinacionInicial.x;
-
-        rb.velocity = new Vector2(Despalazamiento_X, rb.velocity.y);
-    }
-
-
-
     // Funcion para mover el personaje con el teclado
     private void movePC()
-    {   
+    {
         float Direccion = Input.GetAxisRaw("Horizontal");
 
 
         rb.velocity = new Vector2(FuerzaLateral_PC * Direccion, rb.velocity.y);
     }
+
+
+
+
+
+    //Funcion para mover el personaje inclinando el celular
+    private void moveCelular()
+    {
+        
+
+        float Despalazamiento_X = (FuerzaLateral_Celular *Input.acceleration.x) - InclinacionInicial;
+
+        rb.velocity = new Vector2(Despalazamiento_X, rb.velocity.y);
+    }
+
 }
+
