@@ -10,6 +10,10 @@ public class BananaManager : MonoBehaviour
 
     private float UltimoDisparo = 0;
 
+    private Vector3 posisionUltimaBanana=new Vector3(10000f,10000f,10000f);
+
+   
+
     [SerializeField]
     private int CantidadBananas = 0;
     [SerializeField]
@@ -18,20 +22,33 @@ public class BananaManager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D Other)
     {
+
         if (Other.tag == "Banana")
         {
-            CantidadBananas++;
-          
-            Destroy(Other.gameObject);
+            if (Other.transform.position != posisionUltimaBanana)
+            {
+                if (Other.transform.position != null)
+                {
+                    Destroy(Other.gameObject);
+
+                    posisionUltimaBanana = Other.transform.position;
+
+                    CantidadBananas++;
+                }
+            }
         }
         
     }
+  
+
+
+
 
     private void Update()
     {
         //Dispara Bananas
 
-        if (GetComponent<SaltoLateral>().GetDisparar() || Input.GetKeyDown(KeyCode.Space))//Desliza el dedo o apreta space
+        if (GetComponentInChildren<SaltoLateral>().GetDisparar() || Input.GetKeyDown(KeyCode.Space))//Desliza el dedo o apreta space
         {
             
                     if (UltimoDisparo + DelayDisparos < Time.time)//Si paso suficiente tiempo desde el ultimo disparo
@@ -47,7 +64,7 @@ public class BananaManager : MonoBehaviour
                    
                         }
                     }
-            GetComponent<SaltoLateral>().SetDispararFalse();
+            GetComponentInChildren<SaltoLateral>().SetDispararFalse();
         }
     }
 

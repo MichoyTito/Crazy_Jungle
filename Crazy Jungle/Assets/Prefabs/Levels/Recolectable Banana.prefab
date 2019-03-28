@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5743396402678089438}
   - component: {fileID: 5743396402678089439}
   - component: {fileID: 5743396402678089436}
-  - component: {fileID: 5743396402678089437}
   - component: {fileID: 5743396402678089434}
   m_Layer: 0
   m_Name: Recolectable Banana
@@ -117,25 +116,9 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.22149503, y: -0.72419965}
-  m_Size: {x: 2.1513793, y: 0.85638237}
+  m_Offset: {x: 0.120651215, y: -0.37338644}
+  m_Size: {x: 2.2120528, y: 1.5580583}
   m_Direction: 1
---- !u!70 &5743396402678089437
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5743396402678089435}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 1.0735044, y: 0.22151709}
-  m_Size: {x: 0.5666733, y: 1.7594557}
-  m_Direction: 0
 --- !u!114 &5743396402678089434
 MonoBehaviour:
   m_ObjectHideFlags: 0

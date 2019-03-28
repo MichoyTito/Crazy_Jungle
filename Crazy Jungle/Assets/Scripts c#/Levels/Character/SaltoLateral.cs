@@ -19,18 +19,18 @@ public class SaltoLateral : MonoBehaviour
 
 
     private bool TocandoArbol = false;
-
-    private void OnCollisionEnter2D(Collision2D collision)
+  
+    private void OnTriggerEnter2D(Collider2D Other)
     {
-        if (collision.collider.tag == "Tree")
+        if (Other.tag == "Tree")
         {
-            GetComponent<Movimento_acelerometro>().enabled = true;
+            GetComponentInParent<Movimento_acelerometro>().enabled = true;
             TocandoArbol = true;
         }
     }
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerExit2D(Collider2D Other)
     {
-        if (collision.collider.tag == "Tree")
+        if (Other.tag == "Tree")
         {
            
             TocandoArbol = false;
@@ -130,16 +130,16 @@ public class SaltoLateral : MonoBehaviour
         if (TocandoArbol)
         {
             //desactivo el acelerometro
-            GetComponent<Movimento_acelerometro>().enabled = false;
+            GetComponentInParent<Movimento_acelerometro>().enabled = false;
 
 
             if (direccion == "DER")
             {
-                GetComponent<Rigidbody2D>().AddForce(Vector2.right * FuerzaImpulso);
+                GetComponentInParent<Rigidbody2D>().AddForce(Vector2.right * FuerzaImpulso);
             }
             else if (direccion == "IZQ")
             {
-                GetComponent<Rigidbody2D>().AddForce(Vector2.left * FuerzaImpulso);
+                GetComponentInParent<Rigidbody2D>().AddForce(Vector2.left * FuerzaImpulso);
             }
             else
             {

@@ -9,6 +9,8 @@ public class TriggerLlegada : MonoBehaviour
 
     private GameObject arboles;
 
+    
+
 
     //Consegir los arboles
     private void Awake()
@@ -35,7 +37,7 @@ public class TriggerLlegada : MonoBehaviour
 
         if (Other.tag == "Trigger Gravity")
         {
-            EnableGravity();
+            EnableGravity(Other.gameObject);
         }
         if (Other.tag == "Trigger StopWater")
         {
@@ -52,11 +54,15 @@ public class TriggerLlegada : MonoBehaviour
     }
 
     //El mono emieza a caer enla pantalla y los arboles dejan de subir
-    private void EnableGravity()
+    private void EnableGravity(GameObject Other)
     {
-        GetComponent<Rigidbody2D>().gravityScale = 1f;
+        GetComponent<Rigidbody2D>().drag = 0.1f;
+        GetComponent<Rigidbody2D>().velocity = new Vector3(0f, ((-1)*Other.GetComponentInParent<Rigidbody2D>().velocity.y), 0f);
+        GetComponent<Rigidbody2D>().gravityScale = 1.5f;
 
         arboles.GetComponent<desplazamientoSinDestruir>().enabled = false;
+
+       
     }
 
 

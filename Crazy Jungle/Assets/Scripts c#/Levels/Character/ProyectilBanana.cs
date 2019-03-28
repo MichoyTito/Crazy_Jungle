@@ -37,6 +37,13 @@ public class ProyectilBanana : MonoBehaviour
     private void FixedUpdate()
     {
         GetComponent<Transform>().Rotate(new Vector3(0, 0, 15));
+
+
+        if (this.gameObject.transform.position.y < -8f)
+        {
+            Destroy(this.gameObject);
+        }
+
     }
 
 }
