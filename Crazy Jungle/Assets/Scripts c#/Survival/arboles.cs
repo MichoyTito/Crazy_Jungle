@@ -13,6 +13,15 @@ public class arboles : MonoBehaviour
     [SerializeField]
     private GameObject parent;
 
+
+    [Header("Destroy")]
+    [SerializeField]
+    private GameObject algo;
+    [SerializeField]
+    private GameObject algo2;
+    [SerializeField]
+    private GameObject algo3;
+
     private float z = 2.01f;
 
     private GameObject cloneArbol1;
@@ -23,6 +32,10 @@ public class arboles : MonoBehaviour
     {
         InvokeRepeating("spawnArbol1", 0.7f, 0.7f);
         InvokeRepeating("spawnArbol2", 1, 1);
+
+        Destroy(algo, 10);
+        Destroy(algo2, 10);
+        Destroy(algo3, 10);
     }
 
     // Update is called once per frame
@@ -46,7 +59,7 @@ public class arboles : MonoBehaviour
         cloneArbol2 = Instantiate(arbol2, new Vector3(0, -20, z), Quaternion.identity);       
         cloneArbol2.transform.parent = parent.transform;
         cloneArbol2.transform.localEulerAngles = new Vector3(cloneArbol2.transform.rotation.x, 180, cloneArbol2.transform.rotation.z);
-        Destroy(cloneArbol2, 10);
+        Destroy(cloneArbol2, 11);
 
         z += 0.01f;
     }
