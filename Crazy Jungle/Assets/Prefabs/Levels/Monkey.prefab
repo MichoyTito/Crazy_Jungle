@@ -221,7 +221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FuerzaLateral_PC: 5.05
   FuerzaLateral_Celular: 10
-  UnityRemote_Conectado: 0
+  UnityRemote_Conectado: 1
 --- !u!114 &6744868312229536256
 MonoBehaviour:
   m_ObjectHideFlags: 0

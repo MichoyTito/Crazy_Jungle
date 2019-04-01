@@ -40,11 +40,6 @@ public class GameManager : MonoBehaviour
             }
         }
 
-
-        
-
-
-
         //Activo el tiempo
         Time.timeScale = 1;
 
