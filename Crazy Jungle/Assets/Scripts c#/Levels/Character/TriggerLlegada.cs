@@ -56,8 +56,10 @@ public class TriggerLlegada : MonoBehaviour
     //El mono emieza a caer enla pantalla y los arboles dejan de subir
     private void EnableGravity(GameObject Other)
     {
+        this.GetComponent<Movimient_mono_dedo>().enabled = false;//Esto por qur rl sistema de movimerto puede reducir la velocidad del mono
+
         GetComponent<Rigidbody2D>().drag = 0.1f;
-        GetComponent<Rigidbody2D>().velocity = new Vector3(0f, ((-1)*Other.GetComponentInParent<Rigidbody2D>().velocity.y), 0f);
+        GetComponent<Rigidbody2D>().velocity = new Vector3(0f, ((-10)*Other.GetComponentInParent<Rigidbody2D>().velocity.y), 0f);
         GetComponent<Rigidbody2D>().gravityScale = 1.5f;
 
         arboles.GetComponent<desplazamientoSinDestruir>().enabled = false;
