@@ -24,15 +24,7 @@ public class ActivarMenuPausa : MonoBehaviour
     }
     public void Menu()
     {
-        canvas.GetComponent<Canvas>().enabled = false;
-        cameraMain.GetComponent<Animator>().SetBool("Change", true);
-        loadScreen.SetActive(true);
-        Invoke("LoadMenu", 3);
-    }
-
-
-    private void LoadMenu()
-    {
         SceneManager.LoadScene("Main Menu");
     }
+
 }
