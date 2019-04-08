@@ -2487,7 +2487,7 @@ GameObject:
   - component: {fileID: 1310520833}
   - component: {fileID: 1310520832}
   m_Layer: 5
-  m_Name: Surviva Button
+  m_Name: Survival Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

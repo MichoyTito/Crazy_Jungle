@@ -48,7 +48,7 @@ public class canvasMain : MonoBehaviour
     public void onClickSurvival()
     {
         FindObjectOfType<audioManager>().Play("Click");
-        //SceneManager.LoadScene("Survival");
+        SceneManager.LoadScene("Survival");
     }
     public void onClickQuit()
     {
