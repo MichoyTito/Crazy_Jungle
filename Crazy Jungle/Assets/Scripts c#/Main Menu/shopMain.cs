@@ -33,6 +33,7 @@ public class shopMain : MonoBehaviour
     public void onClickHome()
     {
         FindObjectOfType<audioManager>().Play("Click");
+        GameObject.Find("Background").GetComponent<AudioSource>().Stop();
         Invoke("changeScene", 2);
         cameraMain.GetComponent<Animator>().SetBool("load", true);
         loadBar.SetActive(true);
