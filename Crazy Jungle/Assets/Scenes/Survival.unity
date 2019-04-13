@@ -637,6 +637,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 800007109, guid: bea9897da4da7084c8447dbcaefe9264, type: 3}
+      propertyPath: CantidadBananas
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6744868312229536256, guid: bea9897da4da7084c8447dbcaefe9264, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bea9897da4da7084c8447dbcaefe9264, type: 3}
@@ -3923,6 +3927,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cccb8e652f7c444d9c42b678e540252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  banana: {fileID: 870359034336839743, guid: 754206a99904ade4e97e8ac6b7aa4043, type: 3}
+  coco: {fileID: 3478937657652554307, guid: f11a56cb81a0cdb40a5473ae706c0904, type: 3}
   rama1: {fileID: 3635028065906964563, guid: 6e95ee5d2be307440aeadc16d623c766, type: 3}
   rama2: {fileID: 4686203404395632166, guid: ef9b1bec9e9b77b43af7d1ff6898b1ba, type: 3}
   rama3: {fileID: 5408934859771821290, guid: ef5ff3d19c291a747aceb94884d39c8e, type: 3}
