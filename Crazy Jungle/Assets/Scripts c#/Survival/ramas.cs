@@ -24,8 +24,8 @@ public class ramas : MonoBehaviour
     [SerializeField]
     private GameObject parent;
 
-    private float x1 = -1.55f;
-    private float x2 = 1.55f;
+    private float x1 = -1.3f;
+    private float x2 = -1.08f;
     private float x3 = -1.88f;
 
     private GameObject cloneRama1;
@@ -39,12 +39,12 @@ public class ramas : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("spawnRama1", 3, Random.Range(2, 4));
-        InvokeRepeating("spawnRama2", 6, Random.Range(2, 4));
-        InvokeRepeating("spawnRama3", 9, Random.Range(1.5f, 2));
+        InvokeRepeating("spawnRama1", 3, 3);
+        InvokeRepeating("spawnRama2", 6, 4);
+        InvokeRepeating("spawnRama3", 9, 2);
 
-        InvokeRepeating("spawnCoco", 13, 7);
-        InvokeRepeating("spawnCoco2", 15, 13);
+        InvokeRepeating("spawnCoco", 11, 7);
+        InvokeRepeating("spawnCoco2", 14,9);
 
         InvokeRepeating("spawnBanana", 4, 7);
     }
@@ -52,43 +52,43 @@ public class ramas : MonoBehaviour
 
     private void spawnRama1()
     {
-        float y = Random.Range(-12, -5);
+        float y = Random.Range(-20, -5);
 
         cloneRama1 = Instantiate(rama1, new Vector3(x1, y, 0), Quaternion.identity);
         cloneRama1.transform.parent = parent.transform;
 
-        if(x1 == 1.55f)
+        if(x1 == 1.3f)
         {
-            x1 = -1.55f;
+            x1 = -1.3f;
         }
         else
         {
             cloneRama1.transform.localEulerAngles = new Vector3(cloneRama1.transform.rotation.x, 180, cloneRama1.transform.rotation.z);
-            x1 = 1.55f;
+            x1 = 1.3f;
         }
 
         Destroy(cloneRama1, 6);
     }
     private void spawnRama2()
     {
-        float y = Random.Range(-12, -5);
+        float y = Random.Range(-20, -5);
         cloneRama2 = Instantiate(rama2, new Vector3(x2, y, 0), Quaternion.identity);
         cloneRama2.transform.parent = parent.transform;
 
-        if (x2 == 1.55f)
+        if (x2 == 1.08f)
         {
-            x2 = -1.55f;
+            x2 = -1.08f;
         }
         else
         {
             cloneRama2.transform.localEulerAngles = new Vector3(cloneRama2.transform.rotation.x, 180, cloneRama2.transform.rotation.z);
-            x2 = 1.55f;
+            x2 = 1.08f;
         }
         Destroy(cloneRama2, 6);
     }
     private void spawnRama3()
     {
-        float y = Random.Range(-12, -5);
+        float y = Random.Range(-20, -5);
         cloneRama3 = Instantiate(rama3, new Vector3(x3, y, 0), Quaternion.identity);
         cloneRama3.transform.parent = parent.transform;
 
